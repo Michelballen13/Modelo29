@@ -1,19 +1,20 @@
 import React from 'react';
 
 const ComentarioStats = ({ comentarios }) => {
-    const totalComentarios = comentarios.length;
 
-    const calificacionPromedio = 
-        totalComentarios > 0
-        ? comentarios.reduce((total, comentario) => total + parseFloat(comentario.calificacion), 0) / totalComentarios
-        : 0;
+const numComentarios = comentarios.length;
 
-    return (
-        <div className='feedback-stats'>
-            <h4> Comentarios: {totalComentarios} </h4>
-            <h4> Calificación promedio: {calificacionPromedio.toFixed(1)} </h4>
-        </div>
-    );
+const promedioCalificaciones = 
+    numComentarios > 0 
+    ? (comentarios.reduce((acc, comentario) => acc + comentario.calificacion, 0) / numComentarios).toFixed(1)
+    : 0;
+
+return (
+    <div className='feedback-stats'>
+    <h4>Comentarios: {numComentarios}</h4>
+    <h4>Calificación promedio: {promedioCalificaciones}</h4>
+    </div>
+);
 };
 
 export default ComentarioStats;

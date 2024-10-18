@@ -1,31 +1,37 @@
-const Header = ({ autor, titulo, ficha, centrodeformacion }) => {
+import React from 'react'
+
+const Header = ({titulo, autor, centro, ficha}) => {
+
     const headerStyles = {
-        backgroundColor: "#d4e2e3",
-        padding: "123px 20px",  // Añadido para un mejor espaciado
-    };
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        color: '#045abc',
+    },
+    titleStyles = {
+        color: "green"
+    },
+    autorStyles = {
+        color: 'blue'
+    },
+    centroStyles = {
+        color: 'red'
+    },
+    fichaStyles = {
+        color: 'yellow'
+    }
 
-    const autorStyles = {
-        color: "blue",
-    };
 
-    const fichaStyles = {
-        color: "green",
-    };
 
-    const centroStyles = {
-        color: "darkorange",
-    };
 
-    return (
-        <header style={headerStyles}>
-            <div className='container'>
-                <h1>{titulo}</h1>
-                <p style={autorStyles}>Autor: {autor}</p>
-                <p style={fichaStyles}>Ficha: {ficha}</p>
-                <p style={centroStyles}>Centro de Formación: {centrodeformacion}</p>
-            </div>
-        </header>
-    );
+  return (
+    <header style={headerStyles}>
+        <div className='container'>
+            <p style={titleStyles}>{titulo}</p>
+            <p style={autorStyles}>Autor: {autor} </p>
+            <p style={centroStyles}>Centro de formacion: {centro}</p>
+            <p style={fichaStyles}>Ficha: {ficha}</p>
+        </div>
+    </header>
+  )
 }
 
-export default Header;
+export default Header
