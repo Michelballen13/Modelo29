@@ -1,11 +1,20 @@
 meta {
   name: CREAR
   type: http
-  seq: 1
+  seq: 3
 }
 
 post {
-  url: http:/localhost:5000
-  body: none
+  url: http://localhost:5000/comentarios
+  body: json
   auth: none
+}
+
+body:json {
+  
+    {
+      "comentario": "NUEVO",
+      "calificacion": "6"
+    }
+  
 }
