@@ -13,7 +13,7 @@ const About = ({titulo, autor, centro, ficha}) => {
                 <p><b>autor:</b> {autor}</p>
                 <p><b>centro:</b> {centro}</p>
                 <p><b>ficha:</b> {ficha}</p>
-                <p><b>Version:</b>1.0.0</p>
+                <p><b>Version:</b>1.0.</p>
                 
             </div>
         </Card>
